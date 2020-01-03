@@ -9,6 +9,16 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "home" */ '../views/Home.vue')
     },
+    {
+        path: '*',
+        redirect: '/error',
+    },
+    {
+        path: '/error',
+        name: 'error',
+        component: () =>
+            import ( /* webpackChunkName: "home" */ '../views/Error.vue')
+    }
 
 ]
 

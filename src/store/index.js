@@ -4,12 +4,26 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        loading: {
+            titulo: '',
+            estado: false,
+            color: 'secondary'
+        }
+    },
+    mutations: {
+
+        mostrarLoading(state, payload) {
+            state.loading.titulo = payload.titulo
+            state.loading.estado = payload.color
+            state.loading.estado = true
+        },
+
+        ocultarLoading(state) {
+            state.loading.estado = false
+        }
+
+    },
+    actions: {},
+    modules: {}
 })
